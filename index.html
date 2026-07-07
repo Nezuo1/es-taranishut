@@ -189,83 +189,58 @@
     stroke-width:1;
   }
 
-  /* ---------- NAV: ARCOS / CAPITULOS ---------- */
+  /* ---------- MAIN MENU ---------- */
 
-  nav.arcs-nav{
+  nav.main-menu{
     max-width:920px;
-    margin:0 auto;
-    padding:1.5rem 1.5rem 0;
+    margin:2.5rem auto 0;
+    padding:2rem 1.5rem;
     border-top:1px solid var(--stone-line);
   }
 
-  nav.arcs-nav .nav-label{
+  nav.main-menu .menu-label{
     font-family:'Rajdhani', sans-serif;
     font-size:0.75rem;
     letter-spacing:0.3em;
     text-transform:uppercase;
     color:var(--parchment-dim);
-    margin-bottom:0.75rem;
+    margin-bottom:1rem;
     display:block;
   }
 
-  details.arc{
-    border-bottom:1px solid var(--stone-line);
+  .menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:1rem;
   }
 
-  details.arc summary{
-    cursor:pointer;
-    padding:0.85rem 0.2rem;
+  .menu-item{
+    padding:1rem;
+    border:1px solid var(--stone-line);
+    border-radius:6px;
+    background:var(--stone-panel);
+    transition:all 0.3s ease;
+  }
+
+  .menu-item:hover{
+    border-color:var(--rust);
+    background:rgba(192, 106, 52, 0.1);
+    transform:translateY(-2px);
+  }
+
+  .menu-item a{
+    display:block;
     font-family:'Rajdhani', sans-serif;
     font-weight:600;
-    font-size:1.05rem;
-    letter-spacing:0.03em;
+    font-size:1rem;
+    letter-spacing:0.05em;
     color:var(--parchment);
-    list-style:none;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
   }
 
-  details.arc summary::-webkit-details-marker{ display:none; }
-
-  details.arc summary::after{
-    content:"+";
-    font-family:'Rajdhani', sans-serif;
-    color:var(--rust);
-    font-size:1.3rem;
-    line-height:1;
-  }
-
-  details.arc[open] summary::after{
-    content:"–";
-  }
-
-  details.arc summary:hover{ color:var(--storm); }
-
-  .arc-chapters{
-    padding:0 0.2rem 1rem 0.6rem;
-    display:flex;
-    flex-direction:column;
-    gap:0.4rem;
-  }
-
-  .arc-chapters a{
-    font-family:'Crimson Text', serif;
-    font-size:0.98rem;
+  .menu-item p{
+    font-size:0.85rem;
     color:var(--ink-soft);
-    padding:0.15rem 0;
-    border-left:2px solid transparent;
-    padding-left:0.7rem;
-  }
-
-  .arc-chapters a:hover{
-    color:var(--rust);
-    border-left-color:var(--rust);
-  }
-
-  .arc-chapters a.current{
-    color:var(--storm);
-    border-left-color:var(--storm);
+    margin:0.5rem 0 0;
   }
 
   /* ---------- AUTHOR CORNER ---------- */
@@ -472,74 +447,56 @@
   </svg>
 </header>
 
-<nav class="arcs-nav">
-  <span class="nav-label">Arcos y capítulos</span>
+<nav class="main-menu">
+  <span class="menu-label">Selecciona un capítulo</span>
 
-  <details class="arc" open>
-    <summary>Arco I — Kokura</summary>
-    <div class="arc-chapters">
-      <a href="#" class="current">Prólogo — Zeke Rokuta</a>
-      <a href="#">Cap. 1 — El Eco de la Resonancia</a>
-      <a href="#">Cap. 2 — Ciudad Kokura</a>
-      <a href="#">Cap. 3 — Batalla en Kokura</a>
-      <a href="#">Cap. 4 — Resolución</a>
-      <a href="#">Cap. 5 — Sawagani</a>
-      <a href="#">Cap. 6 — La Primera Gran Aventura</a>
-      <a href="#">Cap. 7 — Queen City</a>
-      <a href="#">Cap. 8 — El Entrenamiento Mental</a>
-      <a href="#">Cap. 9 — Determinación</a>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <a href="prologue.html">Prólogo — Zeke Rokuta</a>
+      <p>Arco I: Kokura</p>
     </div>
-  </details>
-
-  <details class="arc">
-    <summary>Arco II — Torneo Clásico del Sur</summary>
-    <div class="arc-chapters">
-      <a href="#">Cap. 10 — The Queen's Tournament</a>
+    <div class="menu-item">
+      <a href="chapter-1.html">Cap. 1 — El Eco de la Resonancia</a>
+      <p>Arco I: Kokura</p>
     </div>
-  </details>
-
-  <details class="arc">
-    <summary>Arco III — Próximamente</summary>
-    <div class="arc-chapters">
-      <a href="#" style="opacity:0.5;">En desarrollo</a>
+    <div class="menu-item">
+      <a href="chapter-2.html">Cap. 2 — Ciudad Kokura</a>
+      <p>Arco I: Kokura</p>
     </div>
-  </details>
+    <div class="menu-item">
+      <a href="chapter-3.html">Cap. 3 — Batalla en Kokura</a>
+      <p>Arco I: Kokura</p>
+    </div>
+    <div class="menu-item">
+      <a href="chapter-4.html">Cap. 4 — Resolución</a>
+      <p>Arco I: Kokura</p>
+    </div>
+    <div class="menu-item">
+      <a href="chapter-5.html">Cap. 5 — Sawagani</a>
+      <p>Arco I: Kokura</p>
+    </div>
+    <div class="menu-item">
+      <a href="chapter-6.html">Cap. 6 — La Primera Gran Aventura</a>
+      <p>Arco I: Kokura</p>
+    </div>
+    <div class="menu-item">
+      <a href="chapter-7.html">Cap. 7 — Queen City</a>
+      <p>Arco I: Kokura</p>
+    </div>
+    <div class="menu-item">
+      <a href="chapter-8.html">Cap. 8 — El Entrenamiento Mental</a>
+      <p>Arco I: Kokura</p>
+    </div>
+    <div class="menu-item">
+      <a href="chapter-9.html">Cap. 9 — Determinación</a>
+      <p>Arco I: Kokura</p>
+    </div>
+    <div class="menu-item">
+      <a href="chapter-10.html">Cap. 10 — The Queen's Tournament</a>
+      <p>Arco II: Torneo Clásico del Sur</p>
+    </div>
+  </div>
 </nav>
-
-<main class="chapter">
-  <p class="chapter-eyebrow">Capítulo 10</p>
-  <h2 class="chapter-title">The Queen's Tournament</h2>
-
-  <img class="chapter-cover" src="https://via.placeholder.com/720x400/2c303a/c06a34?text=The+Queen%27s+Tournament" alt="Portada del Capítulo 10">
-
-  <div class="chapter-body">
-    <p>
-      Aquí va el texto del capítulo. Reemplaza este párrafo y los siguientes
-      con el contenido real cuando esté listo.
-    </p>
-
-    <p class="scene-break">◆ ◆ ◆</p>
-
-    <p>
-      Cuando quieras insertar una ilustración a mitad del capítulo, usa
-      el bloque de abajo tal como está, cambiando solo la imagen y el pie.
-    </p>
-
-    <figure class="chapter-illustration">
-      <img src="https://via.placeholder.com/720x400/2c303a/5a9bb0?text=Scene+Illustration" alt="Descripción de la escena">
-      <figcaption>Boceto — Zeke y Rasmus, clímax de la final</figcaption>
-    </figure>
-
-    <p>
-      El texto continúa después de la imagen con normalidad.
-    </p>
-  </div>
-
-  <div class="chapter-nav">
-    <a href="#">← Cap. 9</a>
-    <a href="#">Cap. 11 →</a>
-  </div>
-</main>
 
 <footer class="site-foot">
   KYŌMEI ZANKYŌ · 共鳴残響 · NEZUŌ
